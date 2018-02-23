@@ -1,7 +1,6 @@
 var exercise = {};
 
 // add a zero to .get returns below 10
-
 function addZero(i) {
     if (i<10) {
         i = "0" + i;
@@ -43,13 +42,7 @@ exercise.roman = function(time){
         var sec1 = sec.charAt(0);
         var sec2 = sec.charAt(1);
 
-    var rTime = {hour1, hour2, min1, min2, sec1, sec2};
-    document.getElementbyId("a0").textContent = rTime[0];
-	document.getElementbyId("b0").textContent = rTime[1];
-	document.getElementbyId("c0").textContent = rTime[2];
-	document.getElementbyId("d0").textContent = rTime[3];
-	document.getElementbyId("e0").textContent = rTime[4];
-	document.getElementbyId("f0").textContent = rTime[5];
+    var rTime = [hour1, hour2, min1, min2, sec1, sec2];
     return rTime
 };
 
@@ -78,9 +71,6 @@ exercise.binary = function(time, col){
     var position2;
     var position4;
     var position8;
-
-    
-    
     
     // strip the required digits from the .get returns
     hour = hour.addZero;
