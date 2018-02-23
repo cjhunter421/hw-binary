@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<script src="exercise.js"></script>
+<script>
+
+
+
+var timer = function() {
+	// get the current date & time
+	var time = new Date();
+	console.log(time);
+
+	// show roman time, using 6 columns
+	setRoman(time);
+
+	// show binary time
+	setBinary(time);
+
+	// update every 1 second
+	setTimeout(timer, 1000);
+};
+
+var setRoman = function(time){
+	// set roman time
+	// you must implement exercise.roman() 
+	exercise.roman(time);
+	
+	console.log(hour);
+	console.log(min);
+	console.log(sec);
+	
+	document.getElementbyId("a0").textContent = rTime[0];
+	document.getElementbyId("b0").textContent = rTime[1];
+	document.getElementbyId("c0").textContent = rTime[2];
+	document.getElementbyId("d0").textContent = rTime[3];
+	document.getElementbyId("e0").textContent = rTime[4];
+	document.getElementbyId("f0").textContent = rTime[5];
+
+
+};
+
+var setBinary = function(time){
+	// set binary time
+	// you must implement exercise.binary()
+	exercise.binary(time);
+
+};
+
+// start timer when page is loaded
+window.onload = function(){
+	timer();
+}
+
+</script>
+
+<style> div {position:absolute; width: 100px; height: 100px; background: silver; text-align: center;vertical-align: middle; line-height: 100px;font-size: 5em;} </style>
+
+<!-- First column -->
+<div id = "a2" style="
+top: 250px;">	
+</div>
+<div id = "a1" style="
+top: 360px;">	
+</div>
+
+<!-- Second column -->
+<div id = "b8" style="
+top: 30px; left: 120px;">	
+</div>
+<div id = "b4" style="
+top: 140px; left: 120px;">	
+</div>
+<div id = "b2" style="
+top: 250px; left: 120px;">	
+</div>
+<div id = "b1" style="
+top: 360px; left: 120px;">	
+</div>
+
+<!-- Third column -->
+<div id = "c4" style="
+top: 140px; left: 230px;">	
+</div>
+<div id = "c2" style="
+top: 250px; left: 230px;">	
+</div>
+<div id = "c1" style="
+top: 360px; left: 230px;">	
+</div>
+
+<!-- Fourth column -->
+<div id = "d8" style="
+top: 30px; left: 340px;">	
+</div>
+<div id = "d4" style="
+top: 140px; left: 340px;">	
+</div>
+<div id = "d2" style="
+top: 250px; left: 340px;">	
+</div>
+<div id = "d1" style="
+top: 360px; left: 340px;">	
+</div>
+
+<!-- Fifth column -->
+<div id = "e4" style="
+top: 140px; left: 450px;">	
+</div>
+<div id = "e2" style="
+top: 250px; left: 450px;">	
+</div>
+<div id = "e1" style="
+top: 360px; left: 450px;">	
+</div>
+
+<!-- Sixth column -->
+<div id = "f8" style="
+top: 30px; left: 560px;">	
+</div>
+<div id = "f4" style="
+top: 140px; left: 560px;">	
+</div>
+<div id = "f2" style="
+top: 250px; left: 560px;">	
+</div>
+<div id = "f1" style="
+top: 360px; left: 560px;">	
+</div>
+
+<!-- Roman Time Row -->
+<div id = "a0" style="
+background: white; border-style: dotted; top: 470px;">	
+
+</div>
+<div id = "b0" style="
+background: white; border-style: dotted; top: 470px; left: 120px;">	
+
+</div>
+<div id = "c0" style="
+background: white; border-style: dotted; top: 470px; left: 230px;">	
+4
+</div>
+<div id = "d0" style="
+background: white; border-style: dotted; top: 470px; left: 340px;">	
+7
+</div>
+<div id = "e0" style="
+background: white; border-style: dotted; top: 470px; left: 450px;">	
+3
+</div>
+<div id = "f0" style="
+background: white; border-style: dotted; top: 470px; left: 560px;">	
+5
+</div>
+
+<!--
+
+	Write HTML elements to hold your binary clock positions
+
+	There are 6 columns in a binary clock
+
+-->
+
+</html>
+     
