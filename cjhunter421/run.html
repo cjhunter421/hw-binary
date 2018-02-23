@@ -23,18 +23,13 @@ var timer = function() {
 var setRoman = function(time){
 	// set roman time
 	// you must implement exercise.roman() 
-	exercise.roman(time);
 	
-	console.log(hour);
-	console.log(min);
-	console.log(sec);
-	
-	document.getElementbyId("a0").textContent = rTime[0];
-	document.getElementbyId("b0").textContent = rTime[1];
-	document.getElementbyId("c0").textContent = rTime[2];
-	document.getElementbyId("d0").textContent = rTime[3];
-	document.getElementbyId("e0").textContent = rTime[4];
-	document.getElementbyId("f0").textContent = rTime[5];
+	document.getElementbyId("a0").textContent = exercise.roman(time)[0];
+	document.getElementbyId("b0").textContent = exercise.roman(time)[1];
+	document.getElementbyId("c0").textContent = exercise.roman(time)[2];
+	document.getElementbyId("d0").textContent = exercise.roman(time)[3];
+	document.getElementbyId("e0").textContent = exercise.roman(time)[4];
+	document.getElementbyId("f0").textContent = exercise.roman(time)[5];
 
 
 };
@@ -42,8 +37,60 @@ var setRoman = function(time){
 var setBinary = function(time){
 	// set binary time
 	// you must implement exercise.binary()
-	exercise.binary(time);
 
+	// hour columns
+	for (i=0; i<exercise.binary(time,hour_col1).length; i++){
+		if (exercise.binary(time,hour_col1)[i]){
+			document.getElementById("a"+i+1).style.color = "red";
+		}
+		else {
+			document.getElementById("a"+i+1).style.color = "silver";
+		}
+	}
+	for (i=0; i<exercise.binary(time,hour_col2).length; i++){
+		if (exercise.binary(time,hour_col2)[i]){
+			document.getElementById("b"+i+1).style.color = "red";
+		}
+		else {
+			document.getElementById("b"+i+1).style.color = "silver";
+		}
+	}
+
+	// minute columns
+	for (i=0; i<exercise.binary(time,min_col1).length; i++){
+		if (exercise.binary(time,min_col1)[i]){
+			document.getElementById("c"+i+1).style.color = "red";
+		}
+		else {
+			document.getElementById("c"+i+1).style.color = "silver";
+		}
+	}
+	for (i=0; i<exercise.binary(time,min_col2).length; i++){
+		if (exercise.binary(time,min_col2)[i]){
+			document.getElementById("d"+i+1).style.color = "red";
+		}
+		else {
+			document.getElementById("d"+i+1).style.color = "silver";
+		}
+	}
+
+	//Second columns
+	for (i=0; i<exercise.binary(time,sec_col1).length; i++){
+		if (exercise.binary(time,sec_col1)[i]){
+			document.getElementById("e"+i+1).style.color = "red";
+		}
+		else {
+			document.getElementById("e"+i+1).style.color = "silver";
+		}
+	}
+	for (i=0; i<exercise.binary(time,sec_col2).length; i++){
+		if (exercise.binary(time,sec_col2)[i]){
+			document.getElementById("f"+i+1).style.color = "red";
+		}
+		else {
+			document.getElementById("f"+i+1).style.color = "silver";
+		}
+	}
 };
 
 // start timer when page is loaded
@@ -130,15 +177,15 @@ top: 360px; left: 560px;">
 <!-- Roman Time Row -->
 <div id = "a0" style="
 background: white; border-style: dotted; top: 470px;">	
-
+1
 </div>
 <div id = "b0" style="
 background: white; border-style: dotted; top: 470px; left: 120px;">	
-
+4
 </div>
 <div id = "c0" style="
 background: white; border-style: dotted; top: 470px; left: 230px;">	
-4
+0
 </div>
 <div id = "d0" style="
 background: white; border-style: dotted; top: 470px; left: 340px;">	
